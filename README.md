@@ -1,2 +1,2 @@
 # expense-tracker
-This is very first project.
+This is my very first project.
