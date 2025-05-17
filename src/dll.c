@@ -38,7 +38,7 @@ void insert_end(node** head, expense e){
     return;
 }
 
-void print_all_node(node** head){
+void print_all_node(node* head){
     node* temp = head;
     if (temp==NULL) return;
     while(temp->next!=NULL){
@@ -48,7 +48,7 @@ void print_all_node(node** head){
     return;
 }
 
-void free_list(node** head){
+void free_list(node* head){
     node* temp;
     while(head!=NULL){
         temp = head;

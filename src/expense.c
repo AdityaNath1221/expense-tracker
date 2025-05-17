@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <strings.h>
+#include <string.h>
 #include "expense.h"
 
 expense create_expense(float amt, char* cat){
@@ -7,8 +7,7 @@ expense create_expense(float amt, char* cat){
 
     e.amount = amt;
 
-    e.category = strcpy(e.category, cat);
-    e.category[sizeof(cat)-1] = '\0';
+    strcpy(e.category, cat);
 
     return e;
 }

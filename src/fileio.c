@@ -18,7 +18,7 @@ int save_expenses(node* head){
 
     node* temp = head;
     while( temp != NULL ){
-        fprintf(fh, "%0.2f, %s\n", temp->amount, temp->category);
+        fprintf(fh, "%0.2f, %s\n", temp->data.amount, temp->data.category);
         temp=temp->next;
     }
 
@@ -26,7 +26,7 @@ int save_expenses(node* head){
     return 1;
 }
 
-int load_expenses(node* head){
+int load_expenses(node** head){
     FILE* fh;
     fh = fopen(filename, "r");
 
@@ -38,8 +38,8 @@ int load_expenses(node* head){
     char category[25];
     float amount;
 
-    while(fscanf(fh, "%f,%s", &amount, &category)==2){
-        create_expense(amount, category);
+    while(fscanf(fh, "%f,%s", &amount, category)==2){
+        expense e = create_expense(amount, category);
         insert_end(head, e);
     }
 

@@ -9,9 +9,9 @@ typedef struct node{
     struct node* next;
 }node;
 
-node* create_node(Expense e);
+node* create_node(expense e);
 void insert_end(node** head, expense e);
-void print_all_node(node** head);
+void print_all_node(node* head);
 void free_list(node* head);
 
-#endif DLL_H
+#endif 

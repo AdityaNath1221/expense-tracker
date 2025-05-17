@@ -4,6 +4,6 @@
 #include "dll.h"
 
 int save_expenses(node* head);
-int load_expenses(node* head);
+int load_expenses(node** head);
 
 #endif
