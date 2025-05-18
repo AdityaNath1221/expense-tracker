@@ -13,5 +13,5 @@ expense create_expense(float amt, char* cat){
 }
 
 void print_expense(expense e){
-    printf("Amount - %.2f, Category - %s", e.amount, e.category);
+    printf("Amount - %.2f, Category - %s \n", e.amount, e.category);
 }

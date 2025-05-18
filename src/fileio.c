@@ -5,11 +5,9 @@
 #include "dll.h"
 #include "expense.h"
 
-const char filename[] = "expenses.txt";
-
 int save_expenses(node* head){
     FILE* fh;
-    fh = fopen(filename, "w");
+    fh = fopen("expenses.txt", "w");
 
     if(fh==NULL){
         printf("Error while opening file.");
@@ -28,7 +26,7 @@ int save_expenses(node* head){
 
 int load_expenses(node** head){
     FILE* fh;
-    fh = fopen(filename, "r");
+    fh = fopen("expenses.txt", "r");
 
     if(fh == NULL){
         printf("Error while opening file.");
